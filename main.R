@@ -1,15 +1,13 @@
 library(tercen)
 library(dplyr)
-
+  
 ctx = tercenCtx()
 
-size <- as.double(ctx$op.value('size'))
-replace <- as.logical(ctx$op.value('replace'))
-
-ctx %>% 
-  select(.y, .ci, .ri, .sids) %>% 
-  group_by(.ci, .ri) %>% 
-  sample_frac(., size = size, replace = replace) %>% 
-  mutate(sample = .y, .y = NULL) %>%
+set.seed(42)
+ 
+data.frame(
+  .ci = seq(from=0, to=ctx$cschema$nRows-1),
+  sample = runif(ctx$cschema$nRows, 0.0, 100.0)
+) %>%
   ctx$addNamespace() %>%
   ctx$save()

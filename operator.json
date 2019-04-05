@@ -1,22 +1,10 @@
 {
   "name": "Sample",
-  "description": "Return sample of the specified size from a set of datapoints using either with or without replacement",
+  "description": "Return sample",
   "tags": ["basic statistics"],
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/sample_operator"],
   "properties": [
-  {
-    "kind": "DoubleProperty",
-    "name": "size",
-    "defaultValue": 1,
-    "description": "a positive number, the fraction of items to choose"
-  },
-  {
-    "kind": "BooleanProperty",
-    "name": "replace",
-    "defaultValue": false,
-    "description": "Should sampling be with replacement?"
-  }
   ]
 }
 
