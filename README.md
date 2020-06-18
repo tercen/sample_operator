@@ -7,7 +7,8 @@
 
 Input projection|.
 ---|---
-`y-axis`        | numeric, input data, per cell
+`y-axis`      | numeric, input data
+`cols`        | numeric, observations, the sample factor(s) 
 
 Input parameters|.
 ---|---
@@ -19,7 +20,7 @@ Output relations|.
 `sample`        | numeric, sample of the input data
 
 ##### Details
-The operator takes all the values of a cell and returns the sample values.The sampling is done per cell. There are usually many values returned for each of the input cell.
+The operator randomly selects columns (i.e. samples)
 
 #### References
 See the `sample` function in base R.
@@ -27,5 +28,4 @@ See the `sample` function in base R.
 
 ##### See Also
 
-[product_operator](https://github.com/tercen/sample_operator)
 #### Examples
